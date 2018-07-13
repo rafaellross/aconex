@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+
+      <mat-grid-list cols="12">
+          <mat-grid-tile              
+              [colspan]="2"
+              
+              >
+              <img src="{{brandImageUrl}}" style="width:109px; ">
+          </mat-grid-tile>
+          <mat-grid-tile
+          [colspan]="6"
+          
+          >
+              <mat-form-field>
+                  <mat-select>
+                    <mat-option *ngFor="let project of projects" [value]="project.id">
+                      {{project.title}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>    
+          
+          </mat-grid-tile>
+        </mat-grid-list>
+
+</mat-toolbar>
